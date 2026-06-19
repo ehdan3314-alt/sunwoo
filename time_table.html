@@ -5,7 +5,7 @@
     <title>강의 시간표</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 예시 이미지처럼 깔끔하고 알록달록한 시간표를 만들기 위한 스타일 */
+        /* 깔끔하고 알록달록한 시간표를 만들기 위한 스타일 */
         table {
             width: 100%;
             max-width: 800px;
@@ -27,11 +27,10 @@
         td:first-child, th:first-child {
             width: 8%;
         }
-        /* 과목별 배경색 지정 (예시 이미지와 동일) */
+        /* 과목별 배경색 지정 */
         .com-util { background-color: #ff0000; color: #000; }     /* 컴퓨터활용: 빨강 */
         .com-logic { background-color: #ffff00; color: #000; }    /* 컴퓨팅논리: 노랑 */
         .ai-com { background-color: #008000; color: #000; }       /* AI 컴퓨팅: 초록 */
-        .reading { background-color: #87ceeb; color: #000; }      /* 책 읽기와 이야기 나누기: 하늘 */
         .writing { background-color: #0000ff; color: #fff; }      /* 창의적 글쓰기와 말하기: 파랑 (글씨 흰색) */
         .com-intro { background-color: #ffa500; color: #000; }    /* 컴퓨터개론: 주황 */
         .web-basic { background-color: #800080; color: #fff; }    /* 웹페이지 기초: 보라 (글씨 흰색) */
@@ -91,13 +90,14 @@
             <tr>
                 <td>1</td>
                 <td class="com-logic" rowspan="3">컴퓨팅논리</td>
-                <td class="reading" rowspan="2">책 읽기와 이야기 나누기</td>
+                <td></td> <!-- 화요일 1시 빈 칸 처리 -->
                 <td></td>
                 <td></td>
             </tr>
             <!-- 2시 (6교시) -->
             <tr>
                 <td>2</td>
+                <td></td> <!-- 화요일 2시 빈 칸 처리 -->
                 <td></td>
                 <td></td>
             </tr>
@@ -129,7 +129,7 @@
 
     <br>
 
-    <!-- 맨 아래 홈으로 텍스트 링크도 index.html로 수정 -->
+    <!-- 맨 아래 홈으로 텍스트 링크 -->
     <a href="index.html">🏠 홈으로</a>
 
 </section>
