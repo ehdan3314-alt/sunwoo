@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>로그인</title>
-    <!-- 다른 페이지들과 디자인을 맞추기 위해 스타일시트 연결 -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <!-- 상단에 작게 로고를 추가하고 홈(index.html)으로 이동하도록 설정 -->
     <a href="index.html">
         <img src="logo.png" width="50" alt="SW 로고">
     </a>
@@ -24,10 +22,17 @@
 비밀번호<br>
 <input type="password"><br><br>
 
-<!-- 로그인 성공 알림창이 뜨고, 확인을 누르면 index.html로 이동 -->
-<button onclick="alert('로그인 성공!'); location.href='index.html';">
+<button onclick="loginSuccess()">
 확인
 </button>
+
+<script>
+    function loginSuccess() {
+        localStorage.setItem("isLoggedIn", "true"); // 로그인 상태 저장
+        alert("로그인 성공!");
+        location.href = "index.html"; // 홈화면으로 이동
+    }
+</script>
 
 </body>
 </html>
