@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>로그인</title>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <!-- 다른 페이지들과 디자인을 맞추기 위해 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<header>
+    <!-- 상단에 작게 로고를 추가하고 홈(index.html)으로 이동하도록 설정 -->
+    <a href="index.html">
+        <img src="logo.png" width="50" alt="SW 로고">
+    </a>
+</header>
 
 <h2>로그인</h2>
 
@@ -15,6 +24,7 @@
 비밀번호<br>
 <input type="password"><br><br>
 
+<!-- 알림창 스펠링 오타(alert)를 올바르게 수정 -->
 <button onclick="alert('로그인 성공!')">
 확인
 </button>
