@@ -1,68 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>강의 시간표</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>강의 시간표</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 예시 이미지처럼 깔끔하고 알록달록한 시간표를 만들기 위한 스타일 */
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #000; /* 검은색 테두리 선 */
+            padding: 10px;
+            height: 50px;
+            font-weight: bold;
+        }
+        th {
+            background-color: #fff;
+        }
+        /* 시간(교시) 열 너비 조절 */
+        td:first-child, th:first-child {
+            width: 8%;
+        }
+        /* 과목별 배경색 지정 (예시 이미지와 동일) */
+        .com-util { background-color: #ff0000; color: #000; }     /* 컴퓨터활용: 빨강 */
+        .com-logic { background-color: #ffff00; color: #000; }    /* 컴퓨팅논리: 노랑 */
+        .ai-com { background-color: #008000; color: #000; }       /* AI 컴퓨팅: 초록 */
+        .reading { background-color: #87ceeb; color: #000; }      /* 책 읽기와 이야기 나누기: 하늘 */
+        .writing { background-color: #0000ff; color: #fff; }      /* 창의적 글쓰기와 말하기: 파랑 (글씨 흰색) */
+        .com-intro { background-color: #ffa500; color: #000; }    /* 컴퓨터개론: 주황 */
+        .web-basic { background-color: #800080; color: #fff; }    /* 웹페이지 기초: 보라 (글씨 흰색) */
+        .empty-day { background-color: #fff; color: #000; }       /* 공강 */
+    </style>
 </head>
 
 <body>
 
 <header>
-<h1>📚 강의 시간표</h1>
+    <!-- 상단에 작게 로고를 추가하고 홈(index.html)으로 이동하도록 설정 -->
+    <a href="index.html">
+        <img src="logo.png" width="50" alt="SW 로고">
+    </a>
+    <h1>📂 강의 시간표</h1>
 </header>
 
 <section>
 
-<table>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 9시 (1교시) -->
+            <tr>
+                <td>9</td>
+                <td class="com-util" rowspan="4">컴퓨터활용</td>
+                <td></td>
+                <td></td>
+                <td class="web-basic" rowspan="4">웹페이지 기초</td>
+                <td class="empty-day" rowspan="9">공강</td>
+            </tr>
+            <!-- 10시 (2교시) -->
+            <tr>
+                <td>10</td>
+                <td class="ai-com" rowspan="3">AI 컴퓨팅</td>
+                <td></td>
+            </tr>
+            <!-- 11시 (3교시) -->
+            <tr>
+                <td>11</td>
+                <td class="com-intro" rowspan="3">컴퓨터개론</td>
+            </tr>
+            <!-- 12시 (4교시) -->
+            <tr>
+                <td>12</td>
+            </tr>
+            <!-- 1시 (5교시) -->
+            <tr>
+                <td>1</td>
+                <td class="com-logic" rowspan="3">컴퓨팅논리</td>
+                <td class="reading" rowspan="2">책 읽기와 이야기 나누기</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- 2시 (6교시) -->
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- 3시 (7교시) -->
+            <tr>
+                <td>3</td>
+                <td class="writing" rowspan="2">창의적 글쓰기와 말하기</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- 4시 (8교시) -->
+            <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- 5시 (9교시) -->
+            <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
-<tr>
-<th>시간</th>
-<th>월</th>
-<th>화</th>
-<th>수</th>
-<th>목</th>
-<th>금</th>
-</tr>
+    <br>
 
-<tr>
-<td>09:30 ~ 12:20</td>
-<td>컴퓨터활용</td>
-<td></td>
-<td></td>
-<td>웹페이지기초</td>
-<td rowspan="5">공강</td>
-</tr>
-
-<tr>
-<td>10:30 ~ 13:20</td>
-<td></td>
-<td>AI컴퓨팅</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>11:30 ~ 14:20</td>
-<td></td>
-<td></td>
-<td>컴퓨터개론</td>
-<td></td>
-</tr>
-
-<tr>
-<td>12:30 ~ 15:20</td>
-<td>컴퓨팅논리</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-</table>
-
-<br>
-
-<a href="main.html">🏠 홈으로</a>
+    <!-- 맨 아래 홈으로 텍스트 링크도 index.html로 수정 -->
+    <a href="index.html">🏠 홈으로</a>
 
 </section>
 
