@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>회원가입</title>
+    <!-- 다른 페이지들과 디자인을 맞추기 위해 스타일시트 연결 -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+    <!-- 상단에 작게 로고를 추가하고 홈(index.html)으로 이동하도록 설정 -->
     <a href="index.html">
         <img src="logo.png" width="50" alt="SW 로고">
     </a>
@@ -25,7 +27,8 @@
 비밀번호<br>
 <input type="password"><br><br>
 
-<button onclick="alert('회원가입을 환영합니다!')">
+<!-- 회원가입 성공 알림창이 뜨고, 확인을 누르면 index.html로 이동 -->
+<button onclick="alert('회원가입 성공!'); location.href='index.html';">
 확인
 </button>
 
